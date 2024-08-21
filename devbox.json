@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.12.0/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.12"
+  ],
+  "env": {
+    "OPENAI_API_KEY": "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"
+  },
+  "shell": {
+    "init_hook": [
+      ". $VENV_DIR/bin/activate"
+    ],
+    "scripts": {
+      "install": "pip install -r requirements.txt",
+      "start": "uvicorn main:app --port=8080"
+    }
+  }
+}
