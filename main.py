@@ -2,6 +2,7 @@ from fastapi import FastAPI, APIRouter
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+import uvicorn
 from app.prompt import prompt
 
 
@@ -27,5 +28,4 @@ async def prompt_api(req: PromptRequest):
 app.include_router(api_router, prefix="/api")
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8080)

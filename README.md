@@ -14,3 +14,32 @@ To setup this repo make sure to have [devbox](https://www.jetify.com/devbox/docs
 2. `cd openai-fastapi` and then run `devbox run install`
 3. Copy your OpenAI's API key in devbox.json's `"env"` section.
 4. run `devbox run start`
+
+## Usage
+
+Once the server is setup and running, you can access to static page by visiting `localhost:8080`
+
+### API
+
+The app also makes an API endpoint available to interact with OpenAI's ChatGPT. The endpoint responds to POST requests to `/api/prompt`. Below is an example request and response:
+
+Example request:
+```bash
+curl --location 'http://127.0.0.1:8080/api/prompt' \
+--header 'Content-Type: application/json' \
+--data '{
+    "prompt": "What is the circumference of Earth?"
+}'
+```
+Example response:
+```json
+{
+  "message": {
+    "content": "The circumference of Earth is approximately 24,901 miles (40,075 kilometers).",
+    "refusal": null,
+    "role": "assistant",
+    "function_call": null,
+    "tool_calls": null
+  }
+}
+```
