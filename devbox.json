@@ -4,7 +4,7 @@
     "python@3.12"
   ],
   "env": {
-    "OPENAI_API_KEY": "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"
+    "OPENAI_API_KEY": "<copy your api key here>"
   },
   "shell": {
     "init_hook": [
