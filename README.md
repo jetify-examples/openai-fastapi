@@ -24,6 +24,7 @@ Once the server is setup and running, you can access to static page by visiting 
 The app also makes an API endpoint available to interact with OpenAI's ChatGPT. The endpoint responds to POST requests to `/api/prompt`. Below is an example request and response:
 
 Example request:
+
 ```bash
 curl --location 'http://127.0.0.1:8080/api/prompt' \
 --header 'Content-Type: application/json' \
@@ -31,7 +32,9 @@ curl --location 'http://127.0.0.1:8080/api/prompt' \
     "prompt": "What is the circumference of Earth?"
 }'
 ```
+
 Example response:
+
 ```json
 {
   "message": {
@@ -43,3 +46,7 @@ Example response:
   }
 }
 ```
+
+## Development
+
+To use this project as a skeleton and develop on it, you can utilize the references for Fast API [docs](https://fastapi.tiangolo.com/#create-it), more specifically, routes and handlers. As well as OpenAI's [Python SDK](https://pypi.org/project/openai/).
